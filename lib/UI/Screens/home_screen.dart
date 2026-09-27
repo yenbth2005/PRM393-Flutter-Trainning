@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:untitled1/UI/Widgets/input_controls_demo.dart';
 import 'package:untitled1/UI/Widgets/core_widgets_demo.dart';
+import 'package:untitled1/UI/Widgets/layout_basics_demo.dart';
+import 'package:untitled1/UI/Widgets/app_structure_demo.dart';
+import 'package:untitled1/UI/Widgets/debug_&_fix_common_ui.dart';
+
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -28,7 +34,7 @@ class HomeScreen extends StatelessWidget {
             _exerciseButton(
               context,
               'Exercise 2 - Input Controls Demo',
-              null,
+              const InputControlsDemo(),
             ),
 
             const SizedBox(height: 12),
@@ -37,7 +43,7 @@ class HomeScreen extends StatelessWidget {
             _exerciseButton(
               context,
               'Exercise 3 - Layout Demo',
-              null,
+               LayoutBasicsDemo(),
             ),
 
             const SizedBox(height: 12),
@@ -46,7 +52,7 @@ class HomeScreen extends StatelessWidget {
             _exerciseButton(
               context,
               'Exercise 4 - App Structure & Theme',
-              null,
+              DarkModeWitget(),
             ),
 
             const SizedBox(height: 12),
@@ -55,7 +61,7 @@ class HomeScreen extends StatelessWidget {
             _exerciseButton(
               context,
               'Exercise 5 - Common UI Fixes',
-              null,
+              DebugFixCommonUI(),
             ),
           ],
         ),
