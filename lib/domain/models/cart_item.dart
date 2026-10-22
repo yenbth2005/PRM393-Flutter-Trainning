@@ -1,5 +1,4 @@
-import 'package:untitled1/data/models/product.dart';
-
+import 'package:untitled1/domain/models/product.dart';
 class CartItem {
   final Product product;
   int quantity;

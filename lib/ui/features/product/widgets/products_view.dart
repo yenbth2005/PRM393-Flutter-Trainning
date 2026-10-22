@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../data/models/product.dart';
+import '../../../../domain/models/product.dart';
 import '../view_models/product_view_model.dart';
 import 'product_card.dart';
 

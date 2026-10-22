@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../data/models/product.dart';
-import '../product/widgets/cart_view.dart';
-import '../product/widgets/product_detail.dart';
-import '../product/widgets/products_view.dart';
+import '../../domain/models/product.dart';
+import '../features/product/widgets/cart_view.dart';
+import '../features/product/widgets/product_detail.dart';
+import '../features/product/widgets/products_view.dart';
+
 
 /// Composition/navigation boundary. Domain actions stay inside feature ViewModels.
 class HomeScreen extends StatefulWidget {

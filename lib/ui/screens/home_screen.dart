@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import '../core/app_structure_demo.dart';
-import '../core/core_widgets_demo.dart';
-import '../core/debug_&_fix_common_ui.dart';
-import '../core/input_controls_demo.dart';
-import '../core/layout_basics_demo.dart';
+
+import '../features/lab4/app_structure_demo.dart';
+import '../features/lab4/core_widgets_demo.dart';
+import '../features/lab4/debug_&_fix_common_ui.dart';
+import '../features/lab4/input_controls_demo.dart';
+import '../features/lab4/layout_basics_demo.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -24,7 +25,7 @@ class HomeScreen extends StatelessWidget {
             // Exercise 1
             _exerciseButton(
               context,
-              'Exercise 1 - Core core Demo',
+              'Exercise 1 - Core lab4 Demo',
               const CoreWidgetDemo(),
             ),
 

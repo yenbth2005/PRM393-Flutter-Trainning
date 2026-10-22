@@ -1,7 +1,8 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:untitled1/repositories/cart_repository.dart';
-import 'package:untitled1/data/models/cart_item.dart';
-import 'package:untitled1/data/models/product.dart';
+
+import '../../../../data/repositories/cart_repository.dart';
+import '../../../../domain/models/cart_item.dart';
+import '../../../../domain/models/product.dart';
 part 'cart_view_model.g.dart';
 
 @Riverpod(keepAlive: true)

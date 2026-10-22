@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../data/models/product.dart';
-import '../../../utils/currency_formatter.dart';
+import '../../../../domain/models/product.dart';
+import '../../../../utils/currency_formatter.dart';
 import '../view_models/cart_view_model.dart';
 
 

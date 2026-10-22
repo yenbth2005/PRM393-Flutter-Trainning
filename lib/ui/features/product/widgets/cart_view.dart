@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:untitled1/ui/product/view_models/cart_view_model.dart';
-
+import '../view_models/cart_view_model.dart';
 import 'cart_card.dart';
 
 String formatVnd(double amount) {

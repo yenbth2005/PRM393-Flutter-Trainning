@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:untitled1/data/models/cart_item.dart';
+
+import '../../../../domain/models/cart_item.dart';
 
 String formatVnd(double amount) {
   return '${amount.toStringAsFixed(0)} đ';

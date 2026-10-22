@@ -1,5 +1,6 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:untitled1/data/models/product.dart';
+
+import '../../domain/models/product.dart';
 part 'product_repository.g.dart';
 
 @riverpod
