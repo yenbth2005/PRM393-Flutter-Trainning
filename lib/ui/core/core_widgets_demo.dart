@@ -6,13 +6,13 @@ class CoreWidgetDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Exercise 1 - Core Widgets')),
+      appBar: AppBar(title: const Text('Exercise 1 - Core core')),
       body: ListView(
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 24, bottom: 24),
             child: Text(
-              "Welcome to Flutter UI",
+              "Welcome to Flutter ui",
               style: const TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,

@@ -13,7 +13,7 @@ class _DebugFixCommonUIState extends State<DebugFixCommonUI> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Debug & Fix Common UI Errors")),
+      appBar: AppBar(title: const Text("Debug & Fix Common ui Errors")),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

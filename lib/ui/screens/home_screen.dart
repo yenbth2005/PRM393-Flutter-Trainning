@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:untitled1/UI/Widgets/input_controls_demo.dart';
-import 'package:untitled1/UI/Widgets/core_widgets_demo.dart';
-import 'package:untitled1/UI/Widgets/layout_basics_demo.dart';
-import 'package:untitled1/UI/Widgets/app_structure_demo.dart';
-import 'package:untitled1/UI/Widgets/debug_&_fix_common_ui.dart';
+import '../core/app_structure_demo.dart';
+import '../core/core_widgets_demo.dart';
+import '../core/debug_&_fix_common_ui.dart';
+import '../core/input_controls_demo.dart';
+import '../core/layout_basics_demo.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Lab 4 - Flutter UI Fundamentals'),
+        title: const Text('Lab 4 - Flutter ui Fundamentals'),
       ),
 
       body: Padding(
@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
             // Exercise 1
             _exerciseButton(
               context,
-              'Exercise 1 - Core Widgets Demo',
+              'Exercise 1 - Core core Demo',
               const CoreWidgetDemo(),
             ),
 
@@ -60,7 +60,7 @@ class HomeScreen extends StatelessWidget {
             // Exercise 5
             _exerciseButton(
               context,
-              'Exercise 5 - Common UI Fixes',
+              'Exercise 5 - Common ui Fixes',
               DebugFixCommonUI(),
             ),
           ],
