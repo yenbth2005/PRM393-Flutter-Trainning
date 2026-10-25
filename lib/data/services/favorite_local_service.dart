@@ -1,0 +1,66 @@
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:sqflite/sql.dart';
+import '../../domain/models/photo.dart';
+import '../repositories/app_database.dart';
+part 'favorite_local_service.g.dart';
+
+@Riverpod(keepAlive: true)
+FavoriteLocalService favoriteLocalService(Ref ref) {
+  final database = ref.watch(appDatabaseProvider);
+  return FavoriteLocalService(database);
+}
+
+class FavoriteLocalService {
+  final AppDatabase _appDatabase;
+
+  FavoriteLocalService(this._appDatabase);
+
+  //Thêm ảnh vào danh sách yêu thích
+  Future<int> insertFavorite(Photo photo) async {
+    final db = await _appDatabase.database;
+
+    return db.insert(
+      'favorite_photos',
+      photo.toMap(),
+      conflictAlgorithm: ConflictAlgorithm.ignore,
+    );
+  }
+
+  //Lấy danh sách ảnh yêu thích
+  Future<List<Photo>> getPhotos() async {
+    final db = await _appDatabase.database;
+
+    final List<Map<String, Object?>> maps = await db.query('favorite_photos');
+
+    return maps.map((map) {
+      return Photo.fromMap(map);
+    }).toList();
+  }
+
+  //Kiểm tra xem ảnh có tồn tại không
+  Future<bool> isFavoritePhoto(int photoId) async{
+    final db = await _appDatabase.database;
+    final maps = await db.query(
+        'favorite_photos',
+        columns: ['photo_id'],
+        where: 'photo_id = ?',
+        whereArgs: [photoId],
+        limit: 1
+    );
+
+    return maps.isNotEmpty;
+  }
+
+  //Xóa ảnh yêu thích ra khỏi danh sách
+  Future<int> deleteFavoritePhoto(int photoId) async {
+    final db = await _appDatabase.database;
+
+    return db.delete(
+      'favorite_photos',
+      where: 'photo_id = ?',
+      whereArgs: [photoId],
+    );
+  }
+
+
+}
